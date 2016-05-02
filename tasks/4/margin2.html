@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<body>
+    <div style="padding: 10px;background-color: yellow;">
+    <div style="border-right: 1px solid red; border-left: 1px solid red; border-top: 1px solid re;">
+        <div style="background-color:green; margin: 10px;color: yellow;">Нежданчик!!! Куда же делся отступ сверху и снизу зеленого блока?
+        </div>
+    </div>
+    </div>
+    Происходит схлопывание. Способы исправить:
+    <ol>
+        <li>
+            Добавить border к внешнему DIV (рамка должа быть быть видимой)
+        </li>
+        <li>
+            Добавить padding к внешнему DIV (минимум 1px)
+        </li>
+        <li>
+            Использовать position:absolute у внешнего DIV
+        </li>
+        <li>
+            Использовать свойство float: left иди right
+        </li>
+        <li>
+            Использовать строчные элемент в качестве внешнего (свойство display: inline)
+        </li>
+        
+        Не схлопываются отступы, указанные для тега html.
+    </ol>
+</body>
+
+</html>
