@@ -1,0 +1,84 @@
+#botvinik {
+    width: 30%;
+    float: right;
+    transform: rotate(12deg);
+}
+
+#botvinik * {
+    color: red !important;
+}
+
+#botvinik span {
+    display: block;
+}
+
+#karpov {
+    background-color: #88FF88;
+    width: 30%;
+    float: left;
+    transform: rotate(12deg);
+}
+
+#kasparov {
+    width: 30%;
+    float: left;
+    padding: 10px;
+    transform: rotate(192deg);
+    background-image: url(./../../library/skrip.gif);
+    background-attachment: fixed;
+}
+
+#kasparov span {
+    border: 1px dotted red;
+}
+
+#kasparov * {
+    font-family: monospace;
+}
+
+.fio {
+    font-size: 2em;
+    font-weight: bold;
+    background-color: gray;
+    font-style: italic;
+}
+
+.birthday {
+    font-size: 2em;
+    border: 1px solid yellow;
+}
+
+.birthday span {
+    font-family: sans-serif;
+    color: blue;
+}
+
+.birthday .date {
+    font-family: monospace;
+    font-weight: bold;
+    text-decoration: underline;
+    font-style: normal;
+}
+
+.date {
+    color: green;
+    font-style: italic;
+    vertical-align: 0.5em;
+}
+
+.champion {
+    background-color: yellow;
+}
+
+.info {
+    background-color: blue;
+    color: yellow;
+}
+
+.text {
+    color: blue;
+}
+
+a {
+    color: #8FF;
+}

@@ -1,0 +1,59 @@
+body {
+    background-image: url(./../../library/SG1998.jpg)
+}
+#botvinik{
+    width:30%;
+    float: right;
+    background-image: url(./../../library/skrip.gif);
+    background-attachment: fixed;
+    background-size: 50%;
+}
+#karpov{
+    width:30%;
+    float:right;
+}
+#kasparov{
+    width:30%;
+    float:left;
+}
+div {
+
+    padding: 3px;
+}
+.fio {
+    font-size: 3em;
+    font-weight: bold;
+    color:green;
+    font-style:italic;
+}
+.birthday {
+    font-size: 2em;
+}
+.birthday span{
+    font-family: sans-serif;
+    color:blue;
+}
+.birthday .date {
+    font-family: monospace;
+    font-weight: bold;
+    text-decoration: underline;
+    font-style: normal;
+}
+.date {
+    color: green;
+    font-style:italic;
+    vertical-align: 0.5em;
+}
+.champion {
+    background-color: yellow;
+}
+.info {
+    background-color: blue;
+    color: yellow;
+}
+.text {
+    color: blue;
+}
+a {
+    color: #8FF;
+}

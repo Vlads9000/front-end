@@ -1,0 +1,30 @@
+#my{
+    color:red;
+}
+#my+span {
+    color: green;
+}
+
+[rel] {
+    color: blue;
+}
+
+[title=gold] {
+    font-family: monospace;
+}
+
+[title$="yellow"] {
+    color:yellow;
+}
+
+[title~="red"] {
+    color:red;
+}
+
+[title|="gold"] {
+    color:green;
+}
+
+[title*="olol"] {
+    font-weight: bold;
+}
