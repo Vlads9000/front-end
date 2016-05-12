@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<!--<link rel="stylesheet" href="chess.css" type="text/css" />-->
+<title>*** unnamed text ***</title>
+
+</head>
+<body>
+<style>
+
+  table.CHESS
+  {
+    border-collapse: collapse;
+  }
+
+  table.CHESS td
+  {
+    width: 50px;
+    height: 50px;
+    border: solid gray 1px;
+  
+  }
+  table.CHESS tr td:nth-child(odd)
+  {
+  background-color: #535353;
+  }
+  
+  table.CHESS tr td:nth-child(even)
+  {
+  background-color: white;
+  }
+  
+   table.CHESS tr:nth-child(odd) td:nth-child(odd) 
+  {
+  background-color: white;
+  }
+  
+  table.CHESS tr:nth-child(odd) td:nth-child(even)
+  {
+  background-color: #535353;
+  }
+  
+  table.CHESS tr:first-child td, 
+  table.CHESS tr:last-child td
+  {
+    height:20px; 
+    background-color:lightgreen !important;
+  }
+  
+  table.CHESS tr td:first-child, 
+  table.CHESS tr td:last-child
+  { 
+   width:20px; 
+   background-color:lightgreen !important;
+  }
+  
+  div.chess{
+  height:50px;
+  width:50px;
+  background:url(chess.png) no-repeat;
+  }
+  .chess.ladia-black{
+  background-position:-102px 3px;
+  
+  }
+  
+  
+  .chess.kon-black{
+  background-position:-210px 3px;
+  
+  }
+  
+  .chess.ferz-black{
+  background-position:-154px 3px;
+  
+  }
+  
+   .chess.coroleva-black{
+  background-position:-49px 3px;
+  
+  }
+  
+   .chess.corol-black{
+  background-position:5px 3px;
+ 
+   }
+  
+  .chess.peshka-black{
+  background-position:-262px 1px;
+  
+  }
+  
+   .chess.peshka-white{
+  background-position:-262px -51px;
+   
+  
+   }
+  
+   .chess.ladia-black{
+  background-position:-102px 3px;
+  
+  }
+
+  .chess.ladia-white{
+  background-position:-102px -51px;
+  
+  }
+  
+  .chess.kon-white{
+  background-position:-210px -51px;
+  
+  }
+  
+  .chess.ferz-white{
+  background-position:-154px -51px;
+  
+  }
+  
+   .chess.coroleva-white{
+  background-position:-49px -51px;
+  
+  }
+  
+   .chess.corol-white{
+  background-position:5px -51px;
+ 
+   }
+  
+</style>
+
+<table class="CHESS">
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      <div class="chess ladia-black"></div>
+    </td>
+    <td>
+      <div class="chess kon-black"></div>
+    </td>
+    <td>
+      <div class="chess ferz-black"></div>
+    </td>
+    <td>
+      <div class="chess coroleva-black">
+    </td>
+    <td>
+      <div class="chess corol-black">
+    </td>
+    <td>
+      <div class="chess ferz-black"></div>
+    </td>
+    <td>
+      <div class="chess kon-black"></div>
+      </td>
+    <td>
+      <div class="chess ladia-black"></div>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      <div class="chess peshka-black"></div>
+    </td>
+    <td>
+      <div class="chess peshka-black"></div>
+    </td>
+    <td>
+      <div class="chess peshka-black"></div>
+    </td>
+    <td>
+      <div class="chess peshka-black"></div>
+    </td>
+    <td>
+      <div class="chess peshka-black"></div>
+    </td>
+    <td>
+      <div class="chess peshka-black"></div>
+    </td>
+    <td>
+      <div class="chess peshka-black"></div>
+    </td>
+    <td>
+      <div class="chess peshka-black"></div>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      <div class="chess peshka-white"></div>
+    </td>
+    <td>
+      <div class="chess peshka-white"></div>
+    </td>
+    <td>
+      <div class="chess peshka-white"></div>
+    </td>
+    <td>
+      <div class="chess peshka-white"></div>
+    </td>
+    <td>
+      <div class="chess peshka-white"></div>
+    </td>
+    <td>
+      <div class="chess peshka-white"></div>
+    </td>
+    <td>
+      <div class="chess peshka-white"></div>
+    </td>
+    <td>
+      <div class="chess peshka-white"></div>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+        <div class="chess ladia-white"></div>
+    </td>
+    <td>
+        <div class="chess kon-white"></div>
+    </td>
+    <td>
+        <div class="chess ferz-white"></div>
+    </td>
+    <td>
+        <div class="chess corol-white"></div>
+    </td>
+    <td>
+         <div class="chess coroleva-white">
+    </td>
+    <td>
+        <div class="chess ferz-white"></div>
+    </td>
+    <td>
+        <div class="chess kon-white"></div>
+    </td>
+    <td>
+        <div class="chess ladia-white"></div>
+    </td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+
+</body></html>
