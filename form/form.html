@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  <style>
+      input[type^=checkbox]
+      {
+          visibility:hidden;
+          
+      }
+      
+      span
+      {
+          color:red;
+          
+      }
+      
+       input:checked+span
+      {
+          color:green;
+          
+      }
+  </style>  
+</head>
+<body>
+
+<form>
+    <form method=get action=''>
+        
+      ФИО: <input type='text' name='fio' value='Бар"Дартаньян"' disabled><br>
+      ФИО: <input type='text' name='fio' value='Бар"Дартаньян"'><br>
+      Цвет: <input type='' name='color'  placeholder='red'>
+      <select>
+          <option>red1</option>
+           <option>red2</option>
+            <option>red3</option>
+             <option>red4</option>
+          </select><br>
+    
+       <textarea name='mytext'>Я считаю, что...</textarea><br>
+          
+    <input type='submit' value='Отправить'><br>
+    <button tupe='reset'>
+        Сброс
+    </button>
+</form>
+
+<form name=checkboxes>
+   
+    <label for="chColor">---
+    <input type='checkbox' name=checkbox id="chColor">
+    <span>
+        Сменить цвет
+        </span>
+    </label>
+    
+</input>
+</form>        
+</body>
+</html>

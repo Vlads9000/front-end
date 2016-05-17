@@ -1,0 +1,8 @@
+var s='s';
+var s1=s;
+var a=[s1"s1"]
+var b=a
+
+b[0]='b'
+a[0]==
+s1==

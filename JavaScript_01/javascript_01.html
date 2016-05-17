@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<script type="text/javascript">
+    
+    var pol = true;
+    var pension = false;
+    var name = prompt('Как Вас зовут?', '');
+    var family = prompt('Ваша фамилия?', '');
+    var otchestvo = prompt('Ваше отчество?', '');
+    var years = prompt ('Сколько вам лет?');
+    years = parseInt(years, 10);
+
+    
+    if ( years>65 )
+    {
+  pension = true;
+}
+    pol = confirm('Вы женщина?');
+    alert(' Ваше ФИО: ' + name + ' '+ family + ' ' + otchestvo + ' \n Вам ' + (years * 365) + ' дней! \n Вам ' + years + ' лет! \n Через 5 лет Вам будет ' + (years + 5) + ' лет!\n Вы '+ (pol ? 'женщина' : 'мужчина\n')+ 'Вы ' + (pension ? 'на пенсии' : 'не на пенсии'));
+    
+</script>
+</body>
+</html>
