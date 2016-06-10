@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+    <title>Document</title>
+     <!--<link rel="stylesheet" href="links.css" type="text/css" />-->
+</head>
+<body>
+
+<style>
+
+
+body
+{
+    padding:0;
+    margin:0;
+}
+.centeredmenu{
+    position:relative;
+}
+.ul-menu
+
+{
+    /*position:relative;*/
+    overflow: hidden;
+    clear: both;
+    /*max-width: 400px;*/
+    margin: 0 auto;
+    list-style: none;
+    /*margin: 0;*/
+    padding: 0;
+    text-align: center;
+    font-family: arial, san-serif;
+    font-weight: bold;
+    background-color: white;
+    
+}
+
+    .li-menu
+{
+        overflow: hidden;
+        padding: 5px;
+        /*border: solid red 1px;*/
+}
+
+    .dotted
+{
+        padding:5px;
+        /*border:solid red 1px;  */
+}
+    .dotted:hover .ul-menu-sub
+    {
+    display: block;
+}
+
+    .a-menu
+{
+        color: green;
+        text-decoration: none;
+
+}
+
+    a:hover
+{
+    color: red;
+}
+
+    .ul-menu-sub
+    {
+    /*position: absolute;*/
+    /*top:100%;*/
+    /*right:0;*/
+    display: none;
+    list-style-type: none;
+    margin:0px 0px;
+    padding:0px 0px;
+    background-color:white;
+    width:100%;
+    border:1px dashed black;
+    color: green;
+    text-decoration: none;
+}
+    .ul-menu-sub:target
+    {
+    display: inline-block;
+}
+
+    .content-item
+    {
+    display: none;
+}
+    .content-item:target
+    {
+    display: block;
+
+}
+        .footer
+    {
+    position: absolute;
+    bottom:0px;
+    /*right:0;*/
+    /*display: none;*/
+    /*list-style-type: none;*/
+    text-align: center;
+    margin:0px 0px;
+    padding:20px 0px;
+    background-color:white;
+    width:100%;
+    border:1px dashed black;
+    color: green;
+    text-decoration: none;
+    font-family: arial, san-serif;
+}
+@media (min-width: 800px)
+{
+    .ul-menu
+
+    {
+    /*max-width: 600px;*/
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    /*border: 1px solid green;*/
+    font-family: arial, san-serif;
+    font-weight: bold;
+    background-color: white;
+    
+    }
+    
+    .li-menu
+    {
+            float: left;
+            width: 25%;
+            padding: 5px;
+            background-color: white;
+            /*border: solid red 1px;*/
+    }
+    
+    .dotted
+    {
+            float: left;
+            width: 20%;
+            padding: 5px;
+            /*border: solid red 1px;*/
+    }
+    .footer{
+    position: absolute;
+    bottom:0px;
+    /*right:0;*/
+    /*display: none;*/
+    /*list-style-type: none;*/
+    text-align: center;
+    margin:0px 0px;
+    padding:20px 0px;
+    background-color:white;
+    width:100%;
+    border:1px dashed black;
+    color: green;
+    text-decoration: none;
+    font-family: arial, san-serif;
+}
+}
+    .content-item{
+    /*position: absolute;*/
+    text-align: center;
+    float: left;
+    margin:0px 0px;
+    padding:0px 0px;
+    background-color:white;
+    width:400px;
+    height:90%;
+    border:1px dashed black;
+    color: green;
+    text-decoration: none;
+    font-family: arial, san-serif;
+}
+
+    .content{
+    /*position: absolute;*/
+    text-align: center;
+    margin:0px 0px;
+    padding:70px 0px;
+    background-color:white;
+    width:498px;
+    height:498px;
+    border:1px dashed black;
+    color: green;
+    text-decoration:none;
+    font-family: arial, san-serif;
+}
+    }
+    
+    .image{
+    position: absolute;
+    width:498px;
+    height:498px;
+    }
+     
+     .ul-menu-sub
+    {
+    position: absolute;
+    top:100%;
+    right:0;
+    display: none;
+    list-style-type: none;
+    margin:0px 0px;
+    padding:0px 0px;
+    background-color:white;
+    width:100%;
+    border:1px dashed black;
+    color: green;
+    text-decoration: none;
+}   
+    }
+
+</style>
+
+<div class="centeredmenu">
+    <ul class="ul-menu">
+        <li class="li-menu"><a class="a-menu" href="#id1">РАСПИСАНИЕ РАБОТЫ</a></li>
+        <li class="li-menu"><a class="a-menu" href="#id2">КОНТАКТЫ</a></li>
+        <li class="li-menu"><a class="a-menu" href="#id3">МЕНЮ</a></li>
+        <li class="dotted"><a class="a-menu" href="#sub-menu">&hellip;</a>
+            
+                <ul id="sub-menu" class="ul-menu-sub">
+                <li class="li-menu-sub"><a class="a-menu" href="#id4">ЗАВТРАК</li>
+                <li class="li-menu-sub"><a class="a-menu" href="#id5">ОБЕД</li>
+                <li class="li-menu-sub"><a class="a-menu" href="#id6">УЖИН</li>
+            
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div class="content">
+    <div id="id0" class="content-item"><img class="image" src="sushki_01.png">
+    </div>
+    <div id="id1" class="content-item">РАСПИСАНИЕ РАБОТЫ</div>
+    <div id="id2" class="content-item">КОНТАКТЫ</div>
+    <div id="id3" class="content-item">МЕНЮ</div>
+    <div id="id4" class="content-item">ЗАВТРАК</div>
+    <div id="id5" class="content-item">ОБЕД</div>
+    <div id="id6" class="content-item">УЖИН</div>
+</div>
+<div class="footer">Время работы: пн.-ср.: 11:00 - 24:00; чт. - вс.: 11:00 - 02:00</div>
+</body>
+</html>

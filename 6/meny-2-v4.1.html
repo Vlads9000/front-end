@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width"/>-->
+    <title>Document</title>
+     <!--<link rel="stylesheet" href="links.css" type="text/css" />-->
+</head>
+<body>
+
+<style>
+
+html, body
+            {
+            background-color:white;
+            padding:0;
+            margin:0;
+            font-family: arial, san-serif;
+            }
+*{
+    box-sizing:border-box;
+}
+    li
+        {
+    /*border-top: solid lightgray 1px;*/
+    /*border-right: solid red 1px;*/
+    padding:5px;
+        }
+
+    ul
+        {
+    /*border: solid red 1px;*/
+    /*padding:5px;*/
+        }
+            
+    a:hover
+        {
+            color: red;
+        }
+        
+    .centeredmenu{
+            /*z-index:100;*/
+            position:relative;
+            width: 100%;
+            padding:30px;
+            background-color:white;
+            /*border-left: solid gray 1px;*/
+            /*border-right: solid red 1px;*/
+           
+        }
+        
+        /*ю.л.-ки верхнего меню*/
+    .ul-menu
+            {
+            overflow: hidden;
+            /*width:400px;*/
+            clear: both;
+            /*min-width: 400px;*/
+            margin: 0 auto;
+            list-style: none;
+            padding: 0px;
+            text-align: center;
+            font-family: arial, san-serif;
+            font-weight: bold;
+            background-color: white;
+            /*border: solid red 1px;*/
+        }
+        
+    /*л.и.-ки верхнего меню*/
+    .li-menu 
+            {
+            box-sizing:border-box;
+            width:100%;
+            /*padding:5px;*/
+            /*border: solid lightgray 1px;*/
+            }
+    .li-meny-sub
+    {
+            box-sizing:border-box;
+            width:100%;
+            padding:0px;
+            border: solid lightgray 1px;
+            }
+    
+    .dotted
+    {
+        padding:0;
+    }
+            
+    /*точки спрятаны*/
+    .dotted > .a-menu
+        {
+            display: none;
+        }
+        
+    /*точки показаны*/
+    .dotted > .ul-menu-sub{
+        display: block;
+        /*padding:5px 0px;*/
+    }
+    
+    /*ховер точки*/
+    .dotted:hover > .ul-menu-sub
+        {
+         /*padding:5px;*/
+        /*border:solid red 1px;  */
+        display: inline-block;
+        }
+
+    
+    .a-menu
+        {
+            color: #cf0000;
+            text-align:center;
+            text-decoration: none;
+            font-size:18px;
+
+        }
+
+    .ul-menu-sub 
+        {
+            /*position: absolute;*/
+            top:100%;
+            right:0;
+            display: none;
+            list-style-type: none;
+            margin:0px 0px;
+            padding:0px 0px;
+            background-color:white;
+            width:100%;
+            /*border:1px dashed black;*/
+            color: green;
+            text-decoration: none;
+        }
+        
+    .ul-menu-sub:target
+        {
+            display: inline-block;
+        }
+        
+    .content
+    
+            {
+            /*position: fixed;*/
+            /*vertical-align:center;*/
+            background-color:lightgray;
+            /*max-width: 800px*/
+            /*height: 700px;*/
+            text-align:center;
+            margin:0px;
+            padding:20px 20px 70px 20px;
+            background-color:yellow;
+            /*height:auto;*/
+            /*border:1px dashed black;*/
+            color:gray;
+            text-decoration:none;
+            font-family: arial, san-serif;
+            }
+    
+    .content-item
+        {
+            display: none;
+            
+        }
+    .content-item:target
+        {
+            display: block;
+            clear: both;
+            overflow:hidden;
+            text-align: center;
+                                                
+                                            
+    
+        }
+    
+    .footer
+        {
+            /*position: absolute;*/
+            clear:both;
+            bottom:0px;
+            /*right:0;*/
+            /*display: none;*/
+            text-align: center;
+            margin:0px 0px;
+            padding:1px 10px 20px 25px;
+            background-color:gray;
+            width:100%;
+            /*border:1px dashed black;*/
+            color: lightgray;
+            text-decoration: none;
+            font-family: arial, san-serif;
+                    }
+                    
+                    .text_content
+                    {
+                        font-size: 26px;
+                        /*font-weight:600;*/
+                        line-height:0px;
+                        padding-top:25px;
+                    }
+                                            
+                                            #id0
+                                            {
+                                                border: solid #cf0000 1px;
+                                            }
+                                            
+                                            .item
+                                                    {
+                                                    
+                                                    position: relative;
+                                                    padding:0px;
+                                                    margin:20px 0px;
+                                                    /*width: 150px;*/
+                                                    /*background-color:red;*/
+                                                    /*border: solid #cf0000 1px;*/
+                                                    }
+                                            .item-image
+                                                    {
+                                                     width:300px;
+                                                     height:auto;
+                                                    }
+                                            
+                                            .name
+                                            {
+                                                    position: absolute;
+                                                    top: 20px;
+                                                    background-color: #cf0000;
+                                                    padding: 3px 20px;
+                                                    color: white;
+                                                    border-radius: 5px;
+                                                    font-family: arial; bold;
+                                                    font-weight: 700;
+                                                    font-size: 35px;
+                                            }
+                                            .cost
+                                            {
+                                                    position: absolute;
+                                                    bottom: 20px;
+                                                    background-color:#fdff7c;
+                                                    border-radius: 5px;
+                                                    padding: 3px 20px;
+                                                    color:black;
+                                                    font-family: arial;
+                                                    font-size: 25px;
+                                        
+                                            }
+                                            
+                                            .ves 
+                                            {
+                                                    position: absolute;
+                                                    padding: 3px 20px;
+                                                    /*border: solid lightgray 1px;*/
+                                                    border-radius: 5px;
+                                                    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.3);
+                                                    bottom: 20px;
+                                                    right: 0px;
+                                                    background-color: white;
+                                                    /*padding: 2px 20px;*/
+                                                    color: #cf0000;
+                                                    font-family: arial;
+                                                    font-size: 25px;
+                                            }
+     .wrapper
+    {
+            min-width:500px;
+            padding:20px;
+            /*background-color: lightgray;*/
+      
+}
+
+@media (min-width: 633px){
+    
+  
+            
+            
+    .dotted > .a-menu {
+        display: block;
+        padding:5px;
+    
+    }
+
+    
+    .dotted > .ul-menu-sub{
+        display: none;
+    }
+    .ul-menu > .li-menu,
+    .ul-menu > .dotted{
+        
+        float: left;
+        width: 25%;
+    }
+    
+    
+                                                    .item{
+                                                    position: relative;
+                                                    display: inline-block;
+                                                    padding:0px;
+                                                    margin:10px 10px;
+                                                    /*width: 150px;*/
+                                                    /*background-color:white;*/
+                                                    /*border: solid blue 1px;*/
+                                                    
+                                                    }
+                                                     .item-image
+                                                    {
+                                                     width:235px;
+                                                     height:auto;
+                                                    }
+                                                    
+                                                     .name
+                                            {
+                                                    font-size: 22px;
+                                            }
+                                            
+                                            .cost
+                                            {
+                                                    font-size: 15px;
+                                            }
+                                            
+                                            .ves 
+                                            {
+                                                    font-size: 15px;
+                                            }
+}
+
+
+@media (min-width: 1200px){
+ .dotted > .a-menu
+{
+        display: none;   
+}
+.ul-menu > .li-menu{
+            width:16.6%;
+            /*padding:5px;*/
+            /*border: solid lightgray 1px;*/
+            }
+     
+     .ul-menu > .dotted{
+         width:49.8%;
+     }
+    
+    .li-menu.dotted > .ul-menu-sub
+    {
+     display:block;
+     width:100%;
+     padding:0px;
+    /*border: solid lightgray 1px;*/
+        
+    }
+    .li-menu.dotted > .ul-menu-sub > .li-menu-sub
+    {
+        overflow:hidden;
+        /*clear:both;*/
+        float:left;
+        width:33.33%;
+    }
+    
+
+            
+        
+   
+
+                                                     .item-image
+                                                    {
+                                                     width:335px;
+                                                     height:auto;
+                                                    }
+                                                    
+                                
+            
+            
+
+        
+}        
+        
+        
+
+
+
+</style>
+
+
+
+<div class="wrapper">
+    <div class="content" ><img class="logo-image" src="logo.png"></div>
+        <div class="centeredmenu">
+            <ul class="ul-menu">
+                <li class="li-menu">
+                    <a class="a-menu" href="#id1">МЫ РАБОТАЕМ</a>
+                </li>
+                <li class="li-menu">
+                    <a class="a-menu" href="#id2">КОНТАКТЫ</a>
+                </li>
+                <li class="li-menu">
+                    <a class="a-menu" href="#id3">МЕНЮ</a>
+                </li>
+                <li class="li-menu dotted">
+                    <a class="a-menu">&hellip;
+                    
+                    </a>
+                    
+                                                                    <ul id="sub-menu" class="ul-menu-sub">
+                                                                            
+                                                                            <li class="li-menu-sub">
+                                                                                <a class="a-menu" href="#id4"                       
+                                                                                >ЗАВТРАК</a>
+                                                                                </li>
+                                                                            
+                                                                            <li class="li-menu-sub">
+                                                                                <a class="a-menu" href="#id5"
+                                                                                >ОБЕД</a>
+                                                                                </li>
+                                                                            
+                                                                            <li class="li-menu-sub">
+                                                                                <a class="a-menu" href="#id6"
+                                                                                >УЖИН</a>
+                                                                                </li>
+                                                                                
+                                                                                
+                                                                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="content">
+            <div id="id0" class="content-item"><img class="image" src="sushki_01.png"></div>
+            <div id="id1" class="content-item">
+                <p class="text_content">пн</p>  <p class="content_text-2">12:00 — 00:00</p>
+        		<p class="text_content">вт</p>  <p class="content_text-2">12:00 — 00:00</p> 
+        		<p class="text_content">ср</p>  <p class="content_text-2">12:00 — 00:00</p>
+        		<p class="text_content">ср</p>  <p class="content_text-2">12:00 — 00:00</p>  
+        		<p class="text_content">пт</p>  <p class="content_text-2">12:00 — 00:00</p>  
+        		<p class="text_content">сб</p>  <p class="content_text-2">12:00 — 00:00</p>   
+        		<p class="text_content">вс</p>  <p class="content_text-2">12:00 — 00:00</p>
+            </div>
+            <div id="id2" class="content-item">
+                <p class="text_content">г. Минск</p>
+                <p class="text_content">ул. Ленина, 2</p>
+                
+                </div>
+        <div id="id3" class="content-item">
+                    <p class="text_content">Салат "Домашний"</p>
+                    <p class="content_text-2">ветчина,огурец мар.,горошек,яйцо,картофель,майонез (150)</p>
+                    
+                    <p class="text_content">Салат "Весна"</p>
+                    <p class="content_text-2">салат Айсберг,редис,огурец св.,яйцо,сметана (160)</p>
+                    
+                    <p class="text_content">Салат из овощей с ветчиной</p>
+                    <p class="content_text-2">томат св.,перец св.,горошек,ветчина,яйцо,сыр,майонез (120)</p>
+                    
+                    <p class="text_content">Салат "Белоснежка"</p>
+                    <p class="content_text-2">салат Айсберг,огурец св.,яйцо,масло раст. (120)</p>
+                    
+                    <p class="text_content">Сельдь под шубой</p>
+                    <p class="content_text-2">сельдь,картофель,морковь,свекла,майонез (220)</p>
+                    
+                    <p class="text_content">Яйцо под майонезом с гарниром</p>
+                    <p class="content_text-2">яйцо,томаты св.,огурец св.,горошек,майонез (150)</p>
+        </div>
+        
+        <div id="id4" class="content-item">
+                        <div class="item">
+                            <img class="item-image" src="sushki_01.png" width="398" height="398">
+                            <div class="name">Первый</div>
+                            <div class="ves">300 г.</div>
+                            <div class="cost">7.500 руб.</div>
+                    
+                        </div>
+                        <div class="item">
+                            <img class="item-image" src="sushki_01_0003_4.png" width="398" height="398">
+                            <div class="name">Второй</div>
+                            <div class="cost">7.500 руб</div>
+                            <div class="ves">200 г.</div>
+                    
+                    
+                        </div>
+                        <div class="item">
+                            <img class="item-image" src="sushki_01_0010_11.png" width="398" height="398">
+                            <div class="name">Третий</div>
+                            <div class="ves">250 г.</div>
+                            <div class="cost">7.500 руб</div>
+                    
+                        </div>
+                        <div class="item">
+                            <img class="item-image" src="sushki_01_0007_8.png" width="398" height="398">
+                            <div class="name">Четвертый</div>
+                            <div class="ves">500 г.</div>
+                            <div class="cost">7.500 руб</div>
+                    
+                        </div>
+                        <div class="item">
+                            <img class="item-image" src="sushki_01_0010_11.png" width="398" height="398">
+                            <div class="name">Пятый</div>
+                            <div class="ves">100 г.</div>
+                            <div class="cost">7.500 руб</div>
+                    
+                        </div>
+                        <div class="item">
+                            <img class="item-image" src="sushki_01.png" width="398" height="398">
+                            <div class="name">Шестой</div>
+                            <div class="ves">400 г.</div>
+                            <div class="cost">7.500 руб</div>
+                        </div>
+                </div>
+        
+        
+        <div id="id5" class="content-item">
+                         <div class="item">
+                            <img class="item-image" src="sushki_01.png" width="398" height="398">
+                            <div class="name">Первый</div>
+                            <div class="ves">300 г.</div>
+                            <div class="cost">7.500 руб.</div>
+                    
+                        </div>
+                        <div class="item">
+                            <img class="item-image" src="sushki_01_0003_4.png" width="398" height="398">
+                            <div class="name">Второй</div>
+                            <div class="cost">7.500 руб</div>
+                            <div class="ves">200 г.</div>
+                    
+                    
+                        </div>
+                        <div class="item">
+                            <img class="item-image" src="sushki_01_0010_11.png" width="398" height="398">
+                            <div class="name">Третий</div>
+                            <div class="ves">250 г.</div>
+                            <div class="cost">7.500 руб</div>
+                    
+                        </div>
+                        <div class="item">
+                            <img class="item-image" src="sushki_01_0007_8.png" width="398" height="398">
+                            <div class="name">Четвертый</div>
+                            <div class="ves">500 г.</div>
+                            <div class="cost">7.500 руб</div>
+                    
+                        </div>
+                        <div class="item">
+                            <img class="item-image" src="sushki_01_0010_11.png" width="398" height="398">
+                            <div class="name">Пятый</div>
+                            <div class="ves">100 г.</div>
+                            <div class="cost">7.500 руб</div>
+                    
+                        </div>
+                        <div class="item">
+                            <img class="item-image" src="sushki_01.png" width="398" height="398">
+                            <div class="name">Шестой</div>
+                            <div class="ves">400 г.</div>
+                            <div class="cost">7.500 руб</div>
+                        </div>
+                </div>
+        
+        <div id="id6" class="content-item">
+                        <div class="item">
+                            <img class="item-image" src="sushki_01.png" width="398" height="398">
+                            <div class="name">Первый</div>
+                            <div class="ves">300 г.</div>
+                            <div class="cost">7.500 руб.</div>
+                    
+                        </div>
+                        <div class="item">
+                            <img class="item-image" src="sushki_01_0003_4.png" width="398" height="398">
+                            <div class="name">Второй</div>
+                            <div class="cost">7.500 руб</div>
+                            <div class="ves">200 г.</div>
+                    
+                    
+                        </div>
+                        <div class="item">
+                            <img class="item-image" src="sushki_01_0010_11.png" width="398" height="398">
+                            <div class="name">Третий</div>
+                            <div class="ves">250 г.</div>
+                            <div class="cost">7.500 руб</div>
+                    
+                        </div>
+                        <div class="item">
+                            <img class="item-image" src="sushki_01_0007_8.png" width="398" height="398">
+                            <div class="name">Четвертый</div>
+                            <div class="ves">500 г.</div>
+                            <div class="cost">7.500 руб</div>
+                    
+                        </div>
+                        <div class="item">
+                            <img class="item-image" src="sushki_01_0010_11.png" width="398" height="398">
+                            <div class="name">Пятый</div>
+                            <div class="ves">100 г.</div>
+                            <div class="cost">7.500 руб</div>
+                    
+                        </div>
+                        <div class="item">
+                            <img class="item-image" src="sushki_01.png" width="398" height="398">
+                            <div class="name">Шестой</div>
+                            <div class="ves">400 г.</div>
+                            <div class="cost">7.500 руб</div>
+                        </div>
+                </div>
+    </div>
+        
+        <div class="footer"><p class="text_content">Время работы:</p> <p class="content_text-2">12:00 — 00:00</p>
+        </div>
+</div>
+
+
+</body>
+</html>

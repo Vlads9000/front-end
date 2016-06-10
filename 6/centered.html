@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Выравнивание</title>
+  <style type="text/css">
+  .item
+        {
+            width:100px;
+            height:100px;
+            background-color:gray;
+            margin: 0 auto;
+            float: left;
+        }
+        
+   #centerLayer {
+    width: 600px; /* Ширина слоя в пикселах */
+    margin: 0 auto; /* Отступ слева и справа */
+    background: #fc0; /* Цвет фона */
+    padding: 30px; /* Поля вокруг текста */
+    text-align: left; /* Выравнивание содержимого слоя по левому краю */
+    clear:both;
+   }
+  </style>
+ </head>
+ <body>
+   <div>
+   
+   <div id="centerLayer">
+    меню
+   </div>
+    <div id="centerLayer">
+            <div class="item">
+                контент
+            </div>
+            <div class="item">
+                контент
+            </div>
+            <div class="item">
+                контент
+            </div>
+   </div>
+    <div id="centerLayer">
+    футер
+   </div>
+   </div>
+  </body>
+</html>

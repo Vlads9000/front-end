@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>Шахматки</title>
+</head>
+
+<body>
+  <style>
+    table.CHESS {
+      border-collapse: collapse;
+    }
+    
+    table.CHESS td {
+      width: 50px;
+      height: 50px;
+      border: solid gray 1px;
+    }
+    /*
+    делаем "шашечки"
+    в каждой четной tr делаем нечетные td "черными" - чуть светлее, чтобы были видны фигуры
+    в каждой нечетной tr делаем четные td "черными" - чуть светлее, чтобы были видны фигуры
+    */
+    
+    table.CHESS tr:nth-child(even) td:nth-child(odd),
+    table.CHESS tr:nth-child(odd) td:nth-child(even) {
+      background-color: #333;
+    }
+
+    /*
+    прописываем свойства фона для двух верхних и двух нижних рядов с фигурами
+    */
+    table.CHESS tr:nth-child(2) td:nth-child(1n),
+    table.CHESS tr:nth-child(3) td:nth-child(1n),
+    table.CHESS tr:nth-child(8) td:nth-child(1n),
+    table.CHESS tr:nth-child(9) td:nth-child(1n)
+    {
+      background-image: url(./../../library/chess.png);
+      background-repeat: no-repeat;
+    }
+
+    /*
+    расставляем белые пешки
+    */
+    table.CHESS tr:nth-child(3) td:nth-child(1n)
+    {
+      background-position: -262px -50px;
+    }
+    
+    /*
+    белые ладьи
+    */
+    table.CHESS tr:nth-child(2) td:nth-child(2),
+    table.CHESS tr:nth-child(2) td:nth-child(9)
+    {
+      background-position: -100px -50px;
+    }
+    
+    /*
+    белые кони
+    */
+    table.CHESS tr:nth-child(2) td:nth-child(3),
+    table.CHESS tr:nth-child(2) td:nth-child(8)
+    {
+      background-position: -210px -50px;
+    }
+    
+    /*
+    белые офицеры
+    */
+    table.CHESS tr:nth-child(2) td:nth-child(4),
+    table.CHESS tr:nth-child(2) td:nth-child(7)
+    {
+      background-position: -155px -50px;
+    }
+    
+    /*
+    белый ферзь
+    */
+    table.CHESS tr:nth-child(2) td:nth-child(6)
+    {
+      background-position: -48px -50px;
+    }
+    
+    /*
+    белый король
+    */
+    table.CHESS tr:nth-child(2) td:nth-child(5)
+    {
+      background-position: 7px -50px;
+    }
+    
+    /*
+    расставляем черные пешки
+    */
+    table.CHESS tr:nth-child(8) td:nth-child(1n)
+    {
+      background-position: -260px 2px;
+    }
+    
+    /*
+    черные ладьи
+    */
+    table.CHESS tr:nth-child(9) td:nth-child(2),
+    table.CHESS tr:nth-child(9) td:nth-child(9)
+    {
+      background-position: -100px 2px;
+    }
+    
+    /*
+    черные кони
+    */
+    table.CHESS tr:nth-child(9) td:nth-child(3),
+    table.CHESS tr:nth-child(9) td:nth-child(8)
+    {
+      background-position: -210px 2px;
+    }
+    
+    /*
+    черные офицеры
+    */
+    table.CHESS tr:nth-child(9) td:nth-child(4),
+    table.CHESS tr:nth-child(9) td:nth-child(7)
+    {
+      background-position: -155px 2px;
+    }
+    
+    /*
+    черный ферзь
+    */
+    table.CHESS tr:nth-child(9) td:nth-child(6)
+    {
+      background-position: -48px 2px;
+    }
+    
+    /*
+    черный король
+    */
+    table.CHESS tr:nth-child(9) td:nth-child(5)
+    {
+      background-position: 7px 2px;
+    }
+    
+    /*
+    делаем зеленую рамку
+    переопределяем стили для рамки
+    */
+    table.CHESS tr:first-child td:nth-child(1n), /*верхняя*/
+    table.CHESS tr:last-child td:nth-child(1n), /*нижняя*/
+    table.CHESS tr:nth-child(1n) td:first-child, /*левая*/
+    table.CHESS tr:nth-child(1n) td:last-child /*правая*/
+    {
+      background-color: green;
+      background-image: none;
+    }
+    
+    /*
+    задаем ширину боковых окантовок 
+    */
+    table.CHESS tr:nth-child(1n) td:first-child, /*левая*/
+    table.CHESS tr:nth-child(1n) td:last-child /*правая*/
+    {
+      width:25px;
+    }
+    
+    /*
+    задаем высоту верхней и нижней окантовок
+    */
+    table.CHESS tr:first-child td:nth-child(1n), /*верхняя*/
+    table.CHESS tr:last-child td:nth-child(1n) /*нижняя*/
+    {
+      height:25px;
+    }
+  </style>
+
+  <table class='CHESS'>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+
+</body>
+
+</html>
